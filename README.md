@@ -43,8 +43,8 @@
             }
 
             try {
-                // Changing this line to find your renamed 'template.pdf.pdf'
-                const existingPdfBytes = await fetch('./template.pdf.pdf').then(res => {
+                // Changing this line to find your renamed 'template.pdf'
+                const existingPdfBytes = await fetch('./template.pdf').then(res => {
                     if(!res.ok) throw new Error('PDF file not found');
                     return res.arrayBuffer();
                 });
@@ -66,7 +66,7 @@
 
             } catch (error) {
                 console.error(error);
-                alert('Error generating PDF. Make sure "template.pdf.pdf" is uploaded to your main repository folder.');
+                alert('Error generating PDF. Make sure "template.pdf" is uploaded to your main repository folder.');
             }
         }
     </script>
